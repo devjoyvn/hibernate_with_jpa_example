@@ -1,23 +1,20 @@
-import entities.Message;
-import entities.Message2;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import entities.*;
 
-public class MessageService {
+public class Main {
 
-    public void test () {
+    public static void main(String[] agrs) {
         EntityManagerFactory emf =
-                Persistence.createEntityManagerFactory("HelloWorldPU");
+                Persistence.createEntityManagerFactory("helloword");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        Message message = new Message(); // 2
+        Message message = new Message();
         message.setText("Hello World!");
-        message.setId(1l);
-        em.merge(message);
-
+        em.persist(message);
 
         em.getTransaction().commit();
         em.close();
