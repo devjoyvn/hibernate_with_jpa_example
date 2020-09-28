@@ -7,8 +7,6 @@ import javax.persistence.Persistence;
 
 public class MessageService {
 
-
-
     public void test () {
         EntityManagerFactory emf =
                 Persistence.createEntityManagerFactory("HelloWorldPU");
