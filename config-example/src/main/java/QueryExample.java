@@ -1,10 +1,11 @@
+import entities.Message;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import entities.*;
+import java.util.List;
 
-public class Main {
+public class QueryExample {
 
     public static void main(String[] agrs) {
         EntityManagerFactory emf =
@@ -12,10 +13,10 @@ public class Main {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        Message message = new Message();
-        message.setText("Hello World!");
-        em.persist(message);
-
+        List<Message> messages = em.createQuery("select m from Message m").getResultList();
+        System.out.println("Size: " + messages.size());
+        System.out.println("Text: " + messages.get(0).getText());
+        messages.get(0).setText("Take me to your leader!");
         em.getTransaction().commit();
         em.close();
         emf.close();
