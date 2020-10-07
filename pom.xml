@@ -11,6 +11,7 @@
     <modules>
         <module>config-example</module>
         <module>entity-example</module>
+        <module>mapping-association</module>
     </modules>
 
 </project>
