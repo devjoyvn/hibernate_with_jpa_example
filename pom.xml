@@ -12,6 +12,7 @@
         <module>config-example</module>
         <module>entity-example</module>
         <module>mapping-association</module>
+        <module>fetchtype-example</module>
     </modules>
 
 </project>
