@@ -13,6 +13,7 @@
         <module>entity-example</module>
         <module>mapping-association</module>
         <module>fetchtype-example</module>
+        <module>n+1-example</module>
     </modules>
 
 </project>

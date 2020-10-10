@@ -14,7 +14,9 @@ public class Main {
         em.getTransaction().begin();
 
         Student student = new Student("name", Gender.MALE);
+        Student student1 = new Student("name", Gender.MALE);
         em.persist(student);
+        em.persist(student1);
         em.getTransaction().commit();
         em.close();
         emf.close();
