@@ -9,3 +9,4 @@
 8. [Định nghĩa Entity](https://shareprogramming.net/dinh-nghia-mot-entity-co-ban-trong-hibernate-jpa/)
 8. [Ánh xạ quan hệ](https://shareprogramming.net/huong-dan-map-associations-voi-hibernate-jpa/)
 8. [FetchType Lazy & Eager](https://shareprogramming.net/diem-khac-nhau-giua-lazy-va-eager-trong-hibernate-va-jpa/)
+8. [N + 1 Problem](https://shareprogramming.net/n-1-problem-trong-trong-jpa-va-hibernate/)
