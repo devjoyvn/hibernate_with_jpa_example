@@ -17,7 +17,7 @@ http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
         <class>entities.Customer</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+<!--            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
             <property name="hibernate.format_sql" value="true"/>
             <property name ="hibernate.show_sql" value = "true" />
             <property name="hibernate.use_sql_comments" value="true"/>
@@ -26,7 +26,7 @@ http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/fetchmode?useSSL=false&amp;serverTimezone=UTC" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="123456" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
         </properties>
     </persistence-unit>
 </persistence>

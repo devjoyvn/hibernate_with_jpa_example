@@ -16,5 +16,16 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    // getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+// getters and setters
 }
