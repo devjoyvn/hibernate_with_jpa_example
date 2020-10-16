@@ -15,6 +15,7 @@
         <module>fetchtype-example</module>
         <module>n+1-example</module>
         <module>fetchmode</module>
+        <module>cascade</module>
     </modules>
 
 </project>
