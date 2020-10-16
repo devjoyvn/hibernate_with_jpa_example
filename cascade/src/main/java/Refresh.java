@@ -1,42 +1,35 @@
-package entities;
+import com.sun.org.apache.xpath.internal.operations.Or;
+import entities.Order;
+import entities.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.time.LocalDate;
 
-public class PersistAndMerge {
+public class Refresh {
     public static void main(String[] agrs) {
         EntityManagerFactory emf =
                 Persistence.createEntityManagerFactory("cascade");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-
-
-        Long userId;
-         User user = new User();
+        User user = new User();
+        user.setName("NAME A");
         Order order = new Order();
-        user.getOrders().add(order);
+        order.setDate(LocalDate.of(2020, 1, 1));
         order.setUser(user);
-
-        // Lưu xuống database
+        user.getOrders().add(order);
         em.persist(user);
         em.persist(order);
         em.flush();
 
-        // Cập nhật ID cho User và Order
+        user.setName("NAME B");
+        order.setDate(LocalDate.of(2020, 2, 1));
+        System.out.println(user.getName());
+        System.out.println(order.getDate());
         em.refresh(user);
-        userId = user.getId();
-        // Clear tất cả các persisent entity
-        em.clear();
-
-        User userSaved = em.find(User.class, userId);
-        Order orderSaved = userSaved.getOrders().iterator().next();
-        // merge entity và cascade
-        userSaved.setName("Name updated");
-        orderSaved.setDate(LocalDate.now().now());
-
-        em.merge(userSaved);
+        System.out.println(user.getName());
+        System.out.println(order.getDate());
         em.getTransaction().commit();
         em.close();
         emf.close();

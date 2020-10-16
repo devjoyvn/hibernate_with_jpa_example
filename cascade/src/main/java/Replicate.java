@@ -1,5 +1,5 @@
-package entities;
-
+import entities.Order;
+import entities.User;
 import org.hibernate.ReplicationMode;
 import org.hibernate.Session;
 
