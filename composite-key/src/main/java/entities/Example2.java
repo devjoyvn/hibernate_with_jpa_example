@@ -11,8 +11,8 @@ public class Example2 {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 BookId bookId = new BookId("BOOK_OO1", "VN");
-Book book = new Book(bookId, "shareprogramming.net");
-em.persist(book);
+        Book book = new Book(bookId, "shareprogramming.net");
+        em.persist(book);
         em.getTransaction().commit();
         em.close();
         emf.close();
