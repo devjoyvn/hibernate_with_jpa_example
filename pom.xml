@@ -17,6 +17,7 @@
         <module>fetchmode</module>
         <module>cascade</module>
         <module>composite-key</module>
+        <module>projections</module>
     </modules>
 
 </project>
