@@ -16,6 +16,7 @@
         <module>n+1-example</module>
         <module>fetchmode</module>
         <module>cascade</module>
+        <module>composite-key</module>
     </modules>
 
 </project>
