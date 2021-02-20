@@ -18,6 +18,7 @@
         <module>cascade</module>
         <module>composite-key</module>
         <module>projections</module>
+        <module>enum-mapping-jpa</module>
     </modules>
 
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>entity-example</artifactId>
+    <artifactId>enum-mapping-jpa</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -23,6 +23,7 @@
         </plugins>
     </build>
 
+
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -35,5 +36,4 @@
             <version>8.0.11</version>
         </dependency>
     </dependencies>
-
 </project>

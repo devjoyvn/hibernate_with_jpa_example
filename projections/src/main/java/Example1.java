@@ -19,12 +19,12 @@ public class Example1 {
 //        List<Object> resultList = query.getResultList();
 //        System.out.println(resultList);
 
-CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-CriteriaQuery<String> query = builder.createQuery(String.class);
-Root<Product> product = query.from(Product.class);
-query.select(product.<String>get("name"));
-List<String> resultList = entityManager.createQuery(query).getResultList();
-System.out.println(resultList);
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<String> query = builder.createQuery(String.class);
+        Root<Product> product = query.from(Product.class);
+        query.select(product.<String>get("name"));
+        List<String> resultList = entityManager.createQuery(query).getResultList();
+        System.out.println(resultList);
 
         entityManager.getTransaction().commit();
         entityManager.close();
