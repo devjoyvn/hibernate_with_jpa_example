@@ -1,0 +1,33 @@
+<persistence
+        version="2.1"
+        xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence_2_1.xsd">
+    <persistence-unit name="removal" transaction-type="RESOURCE_LOCAL">
+        <description>
+            Hypersistence Optimizer is a dynamic analyzing tool that can scan
+            your JPA and Hibernate application and provide you tips about the
+            changes you need to make to entity mappings, configurations, queries,
+            and Persistence Context actions to speed up your data access layer.
+        </description>
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>entity.LineItem</class>
+        <class>entity.OrderRequest</class>
+        <class>entity.ShipmentInfo</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name ="hibernate.show_sql" value = "true" />
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="org.hibernate.SQL" value="debug"/>
+            <property name="org.hibernate.type.descriptor.sql.BasicBinder" value="debug"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:bookdb" />
+            <property name="javax.persistence.jdbc.user" value="" />
+            <property name="javax.persistence.jdbc.password" value="" />
+        </properties>
+    </persistence-unit>
+</persistence>
